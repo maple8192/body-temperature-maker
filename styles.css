@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+
+html {
+    height: 100%;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.header {
+    width: calc(100% - 20px);
+    height: 40px;
+    padding-left: 20px;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-size: x-large;
+}
+
+.description {
+    font-size: medium;
+    margin-left: 30px;
+    transform: translateY(4px);
+}
+
+.content {
+    height: calc(100% - 200px);
+    margin-top: 10px;
+    padding-left: 40px;
+    display: flex;
+}
+
+.left-content {
+    flex-grow: 1;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.question-label {
+    font-size: medium;
+    font-weight: bold;
+}
+
+.question {
+    width: 300px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: large;
+    outline: none;
+    border-width: 0 0 1px 0;
+    border-color: black;
+    transition-duration: 0.3s;
+}
+
+.question:focus {
+    border-color: cyan;
+    transition-duration: 0.3s;
+}
+
+.short {
+    width: 25px;
+}
+
+.button {
+    width: 100px;
+    height: 60px;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: lightgreen;
+    transition-duration: 0.3s;
+}
+
+.button:hover {
+    background-color: greenyellow;
+    transition-duration: 0.3s;
+}
+
+.button:active {
+    transform: scale(95%);
+    transition-duration: 0.1s;
+}
+
+.right-content {
+    flex-grow: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-lead {
+    font-size: xx-large;
+}
+
+.result-value {
+    font-size: 200px;
+}
+
+.result-unit {
+    font-size: 50px;
+}
+
+.result-deactivated {
+    color: rgba(0, 0, 0, 0);
+    transform: translateY(100px);
+}
+
+.result-activated {
+    color: rgba(0, 0, 0, 255);
+    transform: translateY(0px);
+    transition-duration: 0.7s;
+}

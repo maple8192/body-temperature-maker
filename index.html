@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>体温メーカー</title>
+
+    <link type="text/css" rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <span class="title">体温メーカー</span>
+        <span class="description">ランダムな体温を生成します。</span>
+    </div>
+    <div class="content">
+        <div id="left-content" class="left-content">
+            <div class="item">
+                <label for="average" class="question-label">平熱</label>
+                <div><input id="average" class="question" type="text" value="36.6">℃</div>
+            </div>
+            <div class="item">
+                <label for="min" class="question-label">最低値</label>
+                <div><input id="min" class="question" type="text" value="36.0">℃</div>
+            </div>
+            <div class="item">
+                <label for="max" class="question-label">最高値</label>
+                <div><input id="max" class="question" type="text" value="36.9">℃</div>
+            </div>
+            <div class="item">
+                <label class="question-label">日付</label>
+                <div><input id="month" class="question short" type="text">月<input id="date" class="question short" type="text">日</div>
+            </div>
+            <div class="item">
+                <label for="seed" class="question-label">シード値</label>
+                <div><input id="seed" class="question" type="text"></div>
+            </div>
+            <div class="item">
+                <label for="deviation" class="question-label">ばらつき</label>
+                <div><input id="deviation" class="question" type="text" value="0.4"></div>
+            </div>
+            <button id="make" class="button">生成</button>
+        </div>
+        <div id="right-content" class="right-content">
+            <div id="result-lead" class="result-lead result-deactivated">あなたの<span id="result-month"></span>月<span id="result-date"></span>日の体温は</div>
+            <div id="result" class="result-deactivated"><span id="result-value" class="result-value">36.6</span><span id="result-unit" class="result-unit">℃です。</span></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
