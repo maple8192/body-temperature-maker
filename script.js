@@ -12,6 +12,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 生成ボタンが押されたときの処理
     document.getElementById("make").addEventListener("click", () => {
+        // 入力が有効かのチェック
+        let failed = false;
+        if (document.getElementById("average").value !== parseFloat(document.getElementById("average").value).toFixed(1)) failed = true;
+        if (document.getElementById("min").value !== parseFloat(document.getElementById("min").value).toFixed(1) || parseFloat(document.getElementById("min").value) > parseFloat(document.getElementById("average").value)) failed = true;
+        if (document.getElementById("max").value !== parseFloat(document.getElementById("max").value).toFixed(1) || parseFloat(document.getElementById("max").value) < parseFloat(document.getElementById("average").value)) failed = true;
+        if (document.getElementById("month").value !== parseInt(document.getElementById("month").value).toString() || parseInt(document.getElementById("month").value) <= 0) failed = true;
+        if (document.getElementById("date").value !== parseInt(document.getElementById("date").value).toString() || parseInt(document.getElementById("date").value) <= 0) failed = true;
+        if (document.getElementById("seed").value !== parseInt(document.getElementById("seed").value).toString() || parseInt(document.getElementById("seed").value) <= 0) failed = true;
+        if (document.getElementById("deviation").value !== parseFloat(document.getElementById("deviation").value).toFixed(1) || parseFloat(document.getElementById("deviation").value) < 0) failed = true;
+        if (failed) {
+            alert("無効な入力があります。");
+            return;
+        }
+
         // 体温生成
         let random = new Random(parseInt(document.getElementById("seed").value) % (UINT_MAX + 1));
         let loop = random.next();
