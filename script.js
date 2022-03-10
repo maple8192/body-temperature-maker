@@ -4,12 +4,13 @@ const UINT_MAX = (2 ** 32) - 1;
 const LOOP_MAX = 5000;
 
 document.addEventListener("DOMContentLoaded", () => {
+    // デフォルト値を設定
     let date = new Date();
     document.getElementById("month").value = date.getMonth() + 1;
     document.getElementById("date").value = date.getDate();
-
     document.getElementById("seed").value = Math.floor(Math.random() * (UINT_MAX - 1) + 1);
 
+    // 生成ボタンが押されたときの処理
     document.getElementById("make").addEventListener("click", () => {
         // 体温生成
         let random = new Random(parseInt(document.getElementById("seed").value) % (UINT_MAX + 1));
