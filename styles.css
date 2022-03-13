@@ -69,6 +69,23 @@ body {
     width: 25px;
 }
 
+.seed-reset {
+    margin-left: 20px;
+    padding: 3px 10px 3px 10px;
+    font-size: 14px;
+    border: none;
+    background-color: lightgray;
+    transition-duration: 0.3s;
+}
+.seed-reset:hover {
+    background-color: darkgray;
+    transition-duration: 0.3s;
+}
+.seed-reset:active {
+    transform: scale(95%);
+    transition-duration: 0.1s;
+}
+
 .button {
     width: 100px;
     height: 60px;
@@ -81,12 +98,10 @@ body {
     background-color: lightgreen;
     transition-duration: 0.3s;
 }
-
 .button:hover {
     background-color: greenyellow;
     transition-duration: 0.3s;
 }
-
 .button:active {
     transform: scale(95%);
     transition-duration: 0.1s;
