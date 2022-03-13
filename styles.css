@@ -128,7 +128,7 @@ body {
 }
 
 .result-deactivated {
-    color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
     transform: translateY(100px);
 }
 
