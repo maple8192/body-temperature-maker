@@ -139,9 +139,7 @@ body {
 
 @media screen and (max-width: 1000px) {
     .header {
-        width: calc(100% - 20px);
         height: 100px;
-        padding-left: 20px;
         background-color: aquamarine;
         display: flex;
         justify-content: center;
