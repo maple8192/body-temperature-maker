@@ -59,7 +59,6 @@ body {
     border-color: black;
     transition-duration: 0.3s;
 }
-
 .question:focus {
     border-color: cyan;
     transition-duration: 0.3s;
@@ -136,4 +135,139 @@ body {
     color: rgba(0, 0, 0, 255);
     transform: translateY(0px);
     transition-duration: 0.7s;
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        width: calc(100% - 20px);
+        height: 100px;
+        padding-left: 20px;
+        background-color: aquamarine;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    .description {
+        display: none;
+    }
+
+    .content {
+        margin-top: 10px;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-content {
+        width: 90%;
+        flex-grow: 0;
+    }
+
+    .item {
+        margin-bottom: 20px;
+    }
+
+    .question-label {
+        font-size: 55px;
+        font-weight: bold;
+    }
+
+    .question {
+        width: 90%;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 50px;
+        outline: none;
+        border-width: 0 0 1px 0;
+        border-color: black;
+        transition-duration: 0.3s;
+    }
+    .question:focus {
+        border-color: cyan;
+        transition-duration: 0.3s;
+    }
+
+    .question-unit {
+        font-size: 50px;
+    }
+
+    .short {
+        width: 60px;
+    }
+
+    .seed-reset {
+        margin-left: 60px;
+        padding: 5px 15px 5px 15px;
+        font-size: 40px;
+        border: none;
+        background-color: lightgray;
+        transition-duration: 0.3s;
+    }
+    .seed-reset:hover {
+        background-color: darkgray;
+        transition-duration: 0.3s;
+    }
+    .seed-reset:active {
+        transform: scale(95%);
+        transition-duration: 0.1s;
+    }
+
+    .button {
+        width: 200px;
+        height: 100px;
+        font-size: 45px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: lightgreen;
+        transition-duration: 0.3s;
+    }
+    .button:hover {
+        background-color: greenyellow;
+        transition-duration: 0.3s;
+    }
+    .button:active {
+        transform: scale(95%);
+        transition-duration: 0.1s;
+    }
+
+    .right-content {
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 0;
+    }
+
+    .result-lead {
+        font-size: xxx-large;
+    }
+
+    .result-value {
+        font-size: 200px;
+    }
+
+    .result-unit {
+        font-size: 50px;
+    }
+
+    .result-deactivated {
+        color: rgba(0, 0, 0, 0);
+        transform: translateY(100px);
+    }
+
+    .result-activated {
+        color: rgba(0, 0, 0, 255);
+        transform: translateY(0px);
+        transition-duration: 0.7s;
+    }
 }
