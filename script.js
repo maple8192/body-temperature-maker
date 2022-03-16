@@ -80,6 +80,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        if (document.activeElement.id === "") {
+            document.getElementById("make").click();
+        } else {
+            document.getElementById(document.activeElement.id).blur();
+        }
+    }
+});
+
 class Random {
     constructor(seed) {
         this.x = Uint32Array.of(seed);
